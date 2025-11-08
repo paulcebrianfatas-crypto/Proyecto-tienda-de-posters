@@ -38,6 +38,7 @@ public class PosterModelo {
         ObraPoster posterObraNuevo = new ObraPoster();
         listaPosters.add(posterObraNuevo);
     }
+
     public void altaPeliculaPoster() {
         PeliculaPoster posterPeliculaNuevo = new PeliculaPoster();
         listaPosters.add(posterPeliculaNuevo);
@@ -145,7 +146,7 @@ public class PosterModelo {
 
                 texto = documento.createTextNode(((MusicaPoster) unPoster).getNacionalidad());
                 nodoDatos.appendChild(texto);
-            } else if(unPoster instanceof  ObraPoster){
+            } else if (unPoster instanceof ObraPoster) {
                 nodoDatos = documento.createElement("edicion");
                 nodoPoster.appendChild(nodoDatos);
 
@@ -163,11 +164,11 @@ public class PosterModelo {
 
                 texto = documento.createTextNode(((ObraPoster) unPoster).getPaletaColores());
                 nodoDatos.appendChild(texto);
-            } else{
+            } else {
                 nodoDatos = documento.createElement("genero");
                 nodoPoster.appendChild(nodoDatos);
 
-                texto = documento.createTextNode(((PeliculaPoster)unPoster).getGenero());
+                texto = documento.createTextNode(((PeliculaPoster) unPoster).getGenero());
                 nodoDatos.appendChild(texto);
 
                 nodoDatos = documento.createElement("director");
@@ -193,9 +194,10 @@ public class PosterModelo {
     }
 
     public void importarXML(File fichero) throws ParserConfigurationException, IOException, SAXException {
-        listaVehiculos = new ArrayList<Vehiculo>();
-        Coche nuevoCoche = null;
-        Moto nuevoMoto = null;
+        listaPosters = new ArrayList<Poster>();
+        MusicaPoster nuevaMusicaPoster = null;
+        ObraPoster nuevaObraPoster = null;
+        PeliculaPoster nuevaPeliculaPoster = null;
 
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
@@ -204,27 +206,53 @@ public class PosterModelo {
         NodeList listaElementos = documento.getElementsByTagName("*");
 
         for (int i = 0; i < listaElementos.getLength(); i++) {
-            Element nodoVehiculo = (Element) listaElementos.item(i);
+            Element nodoPoster = (Element) listaElementos.item(i);
 
-            if (nodoVehiculo.getTagName().equals("Coche")) {
-                nuevoCoche = new Coche();
-                nuevoCoche.setMatricula(nodoVehiculo.getChildNodes().item(0).getTextContent());
-                nuevoCoche.setMarca(nodoVehiculo.getChildNodes().item(1).getTextContent());
-                nuevoCoche.setModelo(nodoVehiculo.getChildNodes().item(2).getTextContent());
-                nuevoCoche.setFechaMatriculacion(LocalDate.parse(nodoVehiculo.getChildNodes().item(3).getTextContent()));
-                nuevoCoche.setNumPlazas(Integer.parseInt(nodoVehiculo.getChildNodes().item(4).getTextContent()));
-                listaVehiculos.add(nuevoCoche);
-            } else {
-                if (nodoVehiculo.getTagName().equals("Moto")) {
-                    nuevoMoto = new Moto();
-                    nuevoMoto.setMatricula(nodoVehiculo.getChildNodes().item(0).getTextContent());
-                    nuevoMoto.setMarca(nodoVehiculo.getChildNodes().item(1).getTextContent());
-                    nuevoMoto.setModelo(nodoVehiculo.getChildNodes().item(2).getTextContent());
-                    nuevoMoto.setFechaMatriculacion(LocalDate.parse(nodoVehiculo.getChildNodes().item(3).getTextContent()));
-                    nuevoMoto.setKms(Double.parseDouble(nodoVehiculo.getChildNodes().item(4).getTextContent()));
-                    listaVehiculos.add(nuevoMoto);
-                }
+            if (nodoPoster.getTagName().equals("MusicaPoster")) {
+                nuevaMusicaPoster = new MusicaPoster();
+                nuevaMusicaPoster.setTitulo(nodoPoster.getChildNodes().item(0).getTextContent());
+                nuevaMusicaPoster.setAutor(nodoPoster.getChildNodes().item(1).getTextContent());
+                nuevaMusicaPoster.setDimensiones(nodoPoster.getChildNodes().item(2).getTextContent());
+                nuevaMusicaPoster.setFechaCreado(LocalDate.parse(nodoPoster.getChildNodes().item(3).getTextContent()));
+                nuevaMusicaPoster.setLenguaje(nodoPoster.getChildNodes().item(2).getTextContent());
+                nuevaMusicaPoster.setnCopias(Integer.parseInt(nodoPoster.getChildNodes().item(4).getTextContent()));
+                nuevaMusicaPoster.setPublico(Boolean.parseBoolean(nodoPoster.getChildNodes().item(2).getTextContent()));
+                nuevaMusicaPoster.setEstilo(nodoPoster.getChildNodes().item(2).getTextContent());
+                nuevaMusicaPoster.setGrupo(nodoPoster.getChildNodes().item(2).getTextContent());
+                nuevaMusicaPoster.setNacionalidad(nodoPoster.getChildNodes().item(2).getTextContent());
+
+                listaPosters.add(nuevaMusicaPoster);
+            } else if (nodoPoster.getTagName().equals("ObraPoster")) {
+                nuevaObraPoster = new ObraPoster();
+                nuevaObraPoster.setTitulo(nodoPoster.getChildNodes().item(0).getTextContent());
+                nuevaObraPoster.setAutor(nodoPoster.getChildNodes().item(1).getTextContent());
+                nuevaObraPoster.setDimensiones(nodoPoster.getChildNodes().item(2).getTextContent());
+                nuevaObraPoster.setFechaCreado(LocalDate.parse(nodoPoster.getChildNodes().item(3).getTextContent()));
+                nuevaObraPoster.setLenguaje(nodoPoster.getChildNodes().item(2).getTextContent());
+                nuevaObraPoster.setnCopias(Integer.parseInt(nodoPoster.getChildNodes().item(4).getTextContent()));
+                nuevaObraPoster.setPublico(Boolean.parseBoolean(nodoPoster.getChildNodes().item(2).getTextContent()));
+                nuevaObraPoster.setEdicion(Integer.parseInt(nodoPoster.getChildNodes().item(4).getTextContent()));
+                nuevaObraPoster.setTipoArte(nodoPoster.getChildNodes().item(2).getTextContent());
+                nuevaObraPoster.setPaletaColores(nodoPoster.getChildNodes().item(2).getTextContent());
+
+
+                listaPosters.add(nuevaMusicaPoster);
+            } else if (nodoPoster.getTagName().equals("PeliculaPoster")) {
+                nuevaPeliculaPoster = new PeliculaPoster();
+                nuevaPeliculaPoster.setTitulo(nodoPoster.getChildNodes().item(0).getTextContent());
+                nuevaPeliculaPoster.setAutor(nodoPoster.getChildNodes().item(1).getTextContent());
+                nuevaPeliculaPoster.setDimensiones(nodoPoster.getChildNodes().item(2).getTextContent());
+                nuevaPeliculaPoster.setFechaCreado(LocalDate.parse(nodoPoster.getChildNodes().item(3).getTextContent()));
+                nuevaPeliculaPoster.setLenguaje(nodoPoster.getChildNodes().item(2).getTextContent());
+                nuevaPeliculaPoster.setnCopias(Integer.parseInt(nodoPoster.getChildNodes().item(4).getTextContent()));
+                nuevaPeliculaPoster.setPublico(Boolean.parseBoolean(nodoPoster.getChildNodes().item(2).getTextContent()));
+                nuevaPeliculaPoster.setGenero(nodoPoster.getChildNodes().item(2).getTextContent());
+                nuevaPeliculaPoster.setDirector(nodoPoster.getChildNodes().item(2).getTextContent());
+                nuevaPeliculaPoster.setPuntuacion(Float.parseFloat(nodoPoster.getChildNodes().item(4).getTextContent()));
+
+                listaPosters.add(nuevaMusicaPoster);
             }
         }
 
     }
+}

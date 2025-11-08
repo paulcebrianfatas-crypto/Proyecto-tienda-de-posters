@@ -1,51 +1,55 @@
 
-M
-java:S1068"0Remove this unused "genEstEdiLbl" private field.(ş¾î8ãşÕË¥3
-P
-java:S1068"3Remove this unused "publicoCheckBox" private field.(æ‘®ş8Í”öÊ¥3
-T
-java:S1068"2Remove this unused "importatButton" private field.(‹š‚ìÿÿÿÿÿ8ÑºˆË¥3
-F
-java:S1068")Remove this unused "list1" private field.(¢†ö8É§–Ë¥3
-U
-java:S1068"3Remove this unused "fechaDataPicker" private field.(¬¹å¶şÿÿÿÿ8†–ÍË¥3
-O
-java:S1068"-Remove this unused "tituloTxt" private field.(õ›ßÀúÿÿÿÿ8Ê³¾Ë¥3
-R
-java:S1068"0Remove this unused "genEstEdiTxt" private field.(å¦Ö¥ÿÿÿÿÿ8ééîË¥3
-M
-java:S1068"0Remove this unused "dirGruArtLbl" private field.(¥°Šó8‘ÄÛË¥3
-L
-java:S1068"/Remove this unused "nuevoButton" private field.(âç¿•8óÉ‡Ë¥3
-M
-java:S1068"0Remove this unused "dirGruArtTxt" private field.(Ğ÷¿8ÉïË¥3
-L
-java:S3740"/Provide the parametrized type for this generic.(¢†ö8É§–Ë¥3
-T
-java:S1068"7Remove this unused "peliculaRadioButton" private field.(óÑÏ¢8Š¹½Ë¥3
-N
-java:S1068",Remove this unused "AutorTxt" private field.(Ş Ğùùÿÿÿÿ8—¿Ë¥3
-T
-java:S1068"2Remove this unused "exportarButton" private field.(Õ‰–Şùÿÿÿÿ8éšˆË¥3
-L
-java:S1068"/Remove this unused "lenguajeTxt" private field.(¼à¨£8…ïÍË¥3
 S
-java:S1068"7Remove this unused "mostrarImagenButton" private field.(ª¬½B8®Ã…Ë¥3
-Q
-java:S1068	"5Remove this unused "musicaRadioButton" private field.(£„€8¥³¼Ë¥3
+java:S1068"7Remove this unused "mostrarImagenButton" private field.(ª¬½B8®Ã…Ë¥3
 T
-java:S1068"2Remove this unused "dimensionesTxt" private field.(£‚â­øÿÿÿÿ8¦ÀË¥3
-M
-java:S1068"0Remove this unused "punNacPalTxt" private field.(œÑ¼ä8¼¸öË¥3
-G
-java:S1068"*Remove this unused "panel1" private field.(–¾Ê‰8‰Ê÷É¥3
-U
-java:S1068"8Remove this unused "insertarImagenButton" private field.(–Ş®­8›Á„Ë¥3
-P
-java:S1068".Remove this unused "nCopiasTxt" private field.(¤ŒÅôıÿÿÿÿ8£ëÎË¥3
+java:S1068"2Remove this unused "exportarButton" private field.(Õ‰–Şùÿÿÿÿ8éšˆË¥3
+L
+java:S3740"/Provide the parametrized type for this generic.(¢†ö8É§–Ë¥3
 [
-java:S1068
-"9Remove this unused "obraDeArteRadioButton" private field.(’Ğ¸Îıÿÿÿÿ8’†½Ë¥3
-t	java:S116"SRename this field "AutorTxt" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ş Ğùùÿÿÿÿ8—¿Ë¥3
+java:S1068"9Remove this unused "obraDeArteRadioButton" private field.(’Ğ¸Îıÿÿÿÿ8’†½Ë¥3
+q
+java:S3252'"OUse static access with "javax.swing.WindowConstants" for "DO_NOTHING_ON_CLOSE".(éïÍÆşÿÿÿÿ8Øİ¼›¦3
+{
+java:S22930"YReplace the type specification in this constructor call with the diamond operator ("<>").(È‹šÆıÿÿÿÿ8©Â›¦3
+M
+java:S1068"0Remove this unused "punNacPalTxt" private field.(œÑ¼ä8¼¸öË¥3
+n
+java:S1104!"QMake frame a static final constant or non-public and provide accessors if needed.(Ü˜üí8Øİ¼›¦3
+w
+java:S1104""UMake dlmPoster a static final constant or non-public and provide accessors if needed.(Éâøıÿÿÿÿ8ˆå½›¦3
+P
+java:S1068".Remove this unused "nCopiasTxt" private field.(¤ŒÅôıÿÿÿÿ8£ëÎË¥3
+U
+java:S1068"3Remove this unused "fechaDataPicker" private field.(¬¹å¶şÿÿÿÿ8†–ÍË¥3
 R
-java:S1068"0Remove this unused "punNacPalLbl" private field.(Ö¨ úûÿÿÿÿ8Ğ„÷Ë¥3
+java:S1068"0Remove this unused "genEstEdiTxt" private field.(å¦Ö¥ÿÿÿÿÿ8ééîË¥3
+T
+java:S1068"7Remove this unused "peliculaRadioButton" private field.(óÑÏ¢8Š¹½Ë¥3
+L
+java:S1068"/Remove this unused "nuevoButton" private field.(âç¿•8óÉ‡Ë¥3
+O
+java:S1068"-Remove this unused "tituloTxt" private field.(õ›ßÀúÿÿÿÿ8Ê³¾Ë¥3
+N
+java:S1068",Remove this unused "AutorTxt" private field.(Ş Ğùùÿÿÿÿ8—¿Ë¥3
+M
+java:S1068"0Remove this unused "genEstEdiLbl" private field.(ş¾î8ãşÕË¥3
+T
+java:S1068"2Remove this unused "dimensionesTxt" private field.(£‚â­øÿÿÿÿ8¦ÀË¥3
+U
+java:S1068"8Remove this unused "insertarImagenButton" private field.(–Ş®­8›Á„Ë¥3
+T
+java:S1068"2Remove this unused "importatButton" private field.(‹š‚ìÿÿÿÿÿ8ÑºˆË¥3
+M
+java:S1068"0Remove this unused "dirGruArtTxt" private field.(Ğ÷¿8ÉïË¥3
+R
+java:S1068"0Remove this unused "punNacPalLbl" private field.(Ö¨ úûÿÿÿÿ8Ğ„÷Ë¥3
+P
+java:S1068"3Remove this unused "publicoCheckBox" private field.(æ‘®ş8Í”öÊ¥3
+M
+java:S1068"0Remove this unused "dirGruArtLbl" private field.(¥°Šó8‘ÄÛË¥3
+Q
+java:S1068
+"5Remove this unused "musicaRadioButton" private field.(£„€8¥³¼Ë¥3
+L
+java:S1068"/Remove this unused "lenguajeTxt" private field.(¼à¨£8…ïÍË¥3
+t	java:S116"SRename this field "AutorTxt" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ş Ğùùÿÿÿÿ8—¿Ë¥3

@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9675de6f-7c0a-4630-9a61-04b4c4cad202" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/8/d8993d5759edc90133e4615b28d09e85b29fb9dd" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/8/d8993d5759edc90133e4615b28d09e85b29fb9dd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/e/6e26b6057a9e684b1de4d36f9eb5cd11d497b8b0" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/e/6e26b6057a9e684b1de4d36f9eb5cd11d497b8b0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/1/c11cbb81121f9293540fc887bf37202bcb8b93ad" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/1/c11cbb81121f9293540fc887bf37202bcb8b93ad" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/paulc/practicaud1/gui/PosterModelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/paulc/practicaud1/gui/PosterModelo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/paulc/practicaud1/gui/Ventana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/paulc/practicaud1/gui/Ventana.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/paulc/practicaud1/util/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/paulc/practicaud1/util/Util.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -112,7 +111,8 @@
       <workItem from="1762440217363" duration="428000" />
       <workItem from="1762499759314" duration="6000" />
       <workItem from="1762603527514" duration="576000" />
-      <workItem from="1762604144934" duration="4392000" />
+      <workItem from="1762604144934" duration="4577000" />
+      <workItem from="1762625822998" duration="2889000" />
     </task>
     <servers />
   </component>
