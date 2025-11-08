@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9675de6f-7c0a-4630-9a61-04b4c4cad202" name="Default Changelist" comment="" />
+    <list default="true" id="9675de6f-7c0a-4630-9a61-04b4c4cad202" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/8/d8993d5759edc90133e4615b28d09e85b29fb9dd" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/8/d8993d5759edc90133e4615b28d09e85b29fb9dd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/paulc/practicaud1/gui/PosterModelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/paulc/practicaud1/gui/PosterModelo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/paulc/practicaud1/gui/Ventana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/paulc/practicaud1/gui/Ventana.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/paulc/practicaud1/util/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/paulc/practicaud1/util/Util.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,11 +21,15 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="34kf1YdxRjBY15limA0oU6HzanI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Vehiculos" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -99,10 +109,27 @@
       <workItem from="1762429127179" duration="835000" />
       <workItem from="1762429996140" duration="5675000" />
       <workItem from="1762436406727" duration="2396000" />
+      <workItem from="1762440217363" duration="428000" />
+      <workItem from="1762499759314" duration="6000" />
+      <workItem from="1762603527514" duration="576000" />
+      <workItem from="1762604144934" duration="4392000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

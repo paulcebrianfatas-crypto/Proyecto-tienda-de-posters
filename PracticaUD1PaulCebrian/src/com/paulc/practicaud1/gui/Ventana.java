@@ -1,6 +1,7 @@
 package com.paulc.practicaud1.gui;
 
 import com.github.lgooddatepicker.components.DatePicker;
+import com.paulc.practicaud1.base.Poster;
 
 import javax.swing.*;
 
@@ -28,4 +29,23 @@ public class Ventana {
     private JLabel dirGruArtLbl;
     private JTextField genEstEdiTxt;
     private JLabel punNacPalLbl;
+
+    public JFrame frame;
+    public DefaultListModel<Poster> dlmPoster;
+
+    public Ventana() {
+        frame = new JFrame("PosterMVC");
+        frame.setContentPane(panel1);
+        frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
+        frame.setLocationRelativeTo(null);
+
+        initComponents();
+    }
+
+    private void initComponents() {
+        dlmPoster=new DefaultListModel<Poster>();
+        list1.setModel(dlmPoster);
+    }
 }
