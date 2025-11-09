@@ -69,7 +69,7 @@
           <text value="Musica"/>
         </properties>
       </component>
-      <component id="e7b9f" class="javax.swing.JRadioButton" binding="obraDeArteRadioButton" default-binding="true">
+      <component id="e7b9f" class="javax.swing.JRadioButton" binding="obraRadioButton">
         <constraints>
           <grid row="0" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
           <forms/>
@@ -200,13 +200,13 @@
           </component>
         </children>
       </scrollpane>
-      <component id="feeb0" class="javax.swing.JButton" binding="importatButton" default-binding="true">
+      <component id="feeb0" class="javax.swing.JButton" binding="importarButton">
         <constraints>
           <grid row="30" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
           <forms/>
         </constraints>
         <properties>
-          <text value="Importat"/>
+          <text value="Importar"/>
         </properties>
       </component>
       <component id="87ad9" class="com.github.lgooddatepicker.components.DatePicker" binding="fechaDataPicker">
