@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/paulc/practicaud1/gui/PosterControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/paulc/practicaud1/gui/PosterControlador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/paulc/practicaud1/gui/PosterModelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/paulc/practicaud1/gui/PosterModelo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/paulc/practicaud1/gui/Ventana.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/paulc/practicaud1/gui/Ventana.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/paulc/practicaud1/gui/Ventana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/paulc/practicaud1/gui/Ventana.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -114,7 +113,7 @@
       <workItem from="1762603527514" duration="576000" />
       <workItem from="1762604144934" duration="4577000" />
       <workItem from="1762625822998" duration="2889000" />
-      <workItem from="1762686665101" duration="3522000" />
+      <workItem from="1762686665101" duration="10020000" />
     </task>
     <servers />
   </component>

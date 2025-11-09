@@ -1,55 +1,58 @@
 
-S
-java:S1068"7Remove this unused "mostrarImagenButton" private field.(ª¬½B8®Ã…Ë¥3
-T
-java:S1068"2Remove this unused "exportarButton" private field.(Õ‰–Şùÿÿÿÿ8éšˆË¥3
-L
-java:S3740"/Provide the parametrized type for this generic.(¢†ö8É§–Ë¥3
-[
-java:S1068"9Remove this unused "obraDeArteRadioButton" private field.(’Ğ¸Îıÿÿÿÿ8’†½Ë¥3
+x
+java:S1104"[Make publicoCheckBox a static final constant or non-public and provide accessors if needed.(§“‚8òŒ¨Ã¦3
+m
+java:S1104"QMake list1 a static final constant or non-public and provide accessors if needed.(·¹ë8¾«Ï¦3
+
+java:S1104"_Make mostrarImagenButton a static final constant or non-public and provide accessors if needed.(í¿Ôıÿÿÿÿ8ÈÅ§Ã¦3
 q
-java:S3252'"OUse static access with "javax.swing.WindowConstants" for "DO_NOTHING_ON_CLOSE".(éïÍÆşÿÿÿÿ8Øİ¼›¦3
-{
-java:S22930"YReplace the type specification in this constructor call with the diamond operator ("<>").(È‹šÆıÿÿÿÿ8©Â›¦3
-M
-java:S1068"0Remove this unused "punNacPalTxt" private field.(œÑ¼ä8¼¸öË¥3
+java:S3252("OUse static access with "javax.swing.WindowConstants" for "DO_NOTHING_ON_CLOSE".(éïÍÆşÿÿÿÿ8Øİ¼›¦3
+s
+java:S1104"VMake nCopiasTxt a static final constant or non-public and provide accessors if needed.(¸²ÜÙ8éÊÏÃ¦3
 n
-java:S1104!"QMake frame a static final constant or non-public and provide accessors if needed.(Ü˜üí8Øİ¼›¦3
+java:S1104""QMake frame a static final constant or non-public and provide accessors if needed.(Ü˜üí8Øİ¼›¦3
+q
+java:S1104"TMake autorTxt a static final constant or non-public and provide accessors if needed.(¬ÒŠû8úÉÒÃ¦3
+u
+java:S1104"XMake dirGruArtLbl a static final constant or non-public and provide accessors if needed.(µšğÓ8éÊÏÃ¦3
+|
+java:S1104"ZMake dimensionesTxt a static final constant or non-public and provide accessors if needed.(ùå³óøÿÿÿÿ8éÊÏÃ¦3
+}
+java:S1104"[Make fechaDataPicker a static final constant or non-public and provide accessors if needed.(ÏÙıÿÿÿÿ8éÊÏÃ¦3
+z
+java:S1104"XMake punNacPalTxt a static final constant or non-public and provide accessors if needed.(Ï‰°Šüÿÿÿÿ8éÊÏÃ¦3
+y
+java:S1104"WMake lenguajeTxt a static final constant or non-public and provide accessors if needed.(óáĞÇùÿÿÿÿ8éÊÏÃ¦3
+x
+java:S1104"[Make obraRadioButton a static final constant or non-public and provide accessors if needed.(ˆ«ŸÃ8Ï†£Ã¦3
+
+java:S1104"_Make peliculaRadioButton a static final constant or non-public and provide accessors if needed.(ÔšõÀùÿÿÿÿ8ÅÏ£Ã¦3
 w
-java:S1104""UMake dlmPoster a static final constant or non-public and provide accessors if needed.(Éâøıÿÿÿÿ8ˆå½›¦3
-P
-java:S1068".Remove this unused "nCopiasTxt" private field.(¤ŒÅôıÿÿÿÿ8£ëÎË¥3
-U
-java:S1068"3Remove this unused "fechaDataPicker" private field.(¬¹å¶şÿÿÿÿ8†–ÍË¥3
-R
-java:S1068"0Remove this unused "genEstEdiTxt" private field.(å¦Ö¥ÿÿÿÿÿ8ééîË¥3
-T
-java:S1068"7Remove this unused "peliculaRadioButton" private field.(óÑÏ¢8Š¹½Ë¥3
-L
-java:S1068"/Remove this unused "nuevoButton" private field.(âç¿•8óÉ‡Ë¥3
-O
-java:S1068"-Remove this unused "tituloTxt" private field.(õ›ßÀúÿÿÿÿ8Ê³¾Ë¥3
-N
-java:S1068",Remove this unused "AutorTxt" private field.(Ş Ğùùÿÿÿÿ8—¿Ë¥3
-M
-java:S1068"0Remove this unused "genEstEdiLbl" private field.(ş¾î8ãşÕË¥3
-T
-java:S1068"2Remove this unused "dimensionesTxt" private field.(£‚â­øÿÿÿÿ8¦ÀË¥3
-U
-java:S1068"8Remove this unused "insertarImagenButton" private field.(–Ş®­8›Á„Ë¥3
-T
-java:S1068"2Remove this unused "importatButton" private field.(‹š‚ìÿÿÿÿÿ8ÑºˆË¥3
-M
-java:S1068"0Remove this unused "dirGruArtTxt" private field.(Ğ÷¿8ÉïË¥3
-R
-java:S1068"0Remove this unused "punNacPalLbl" private field.(Ö¨ úûÿÿÿÿ8Ğ„÷Ë¥3
-P
-java:S1068"3Remove this unused "publicoCheckBox" private field.(æ‘®ş8Í”öÊ¥3
-M
-java:S1068"0Remove this unused "dirGruArtLbl" private field.(¥°Šó8‘ÄÛË¥3
-Q
-java:S1068
-"5Remove this unused "musicaRadioButton" private field.(£„€8¥³¼Ë¥3
-L
-java:S1068"/Remove this unused "lenguajeTxt" private field.(¼à¨£8…ïÍË¥3
-t	java:S116"SRename this field "AutorTxt" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ş Ğùùÿÿÿÿ8—¿Ë¥3
+java:S1104"ZMake importarButton a static final constant or non-public and provide accessors if needed.(ƒ¡£«8™ÆÃ¦3
+u
+java:S1104"XMake dirGruArtTxt a static final constant or non-public and provide accessors if needed.(¾ê¼•8éÊÏÃ¦3
+y
+java:S1104"WMake nuevoButton a static final constant or non-public and provide accessors if needed.(çòĞôÿÿÿÿÿ8Îò™Ã¦3
+K
+java:S3740"/Provide the parametrized type for this generic.(·¹ë8É§–Ë¥3
+v
+java:S1104"ZMake exportarButton a static final constant or non-public and provide accessors if needed.(ë€®V8÷›šÃ¦3
+}
+java:S1104"`Make insertarImagenButton a static final constant or non-public and provide accessors if needed.(ıœëì8€¡§Ã¦3
+r
+java:S1104"UMake tituloTxt a static final constant or non-public and provide accessors if needed.(À¨Êá8¹äËÃ¦3
+z
+java:S1104"XMake genEstEdiLbl a static final constant or non-public and provide accessors if needed.(å©¡ìøÿÿÿÿ8éÊÏÃ¦3
+w
+java:S1104#"UMake dlmPoster a static final constant or non-public and provide accessors if needed.(Éâøıÿÿÿÿ8ˆå½›¦3
+z
+java:S1104"XMake punNacPalLbl a static final constant or non-public and provide accessors if needed.(¾ÕÓ£úÿÿÿÿ8ìİÏÃ¦3
+z
+java:S1104"XMake genEstEdiTxt a static final constant or non-public and provide accessors if needed.(‹¼Óûÿÿÿÿ8éÊÏÃ¦3
+
+java:S1104
+"]Make musicaRadioButton a static final constant or non-public and provide accessors if needed.(ïË°¤úÿÿÿÿ8´ˆ Ã¦3
+{
+java:S22931"YReplace the type specification in this constructor call with the diamond operator ("<>").(È‹šÆıÿÿÿÿ8©Â›¦3
+o
+java:S1104 "RMake imagen a static final constant or non-public and provide accessors if needed.(À¹…«8É‹Ñ¦3

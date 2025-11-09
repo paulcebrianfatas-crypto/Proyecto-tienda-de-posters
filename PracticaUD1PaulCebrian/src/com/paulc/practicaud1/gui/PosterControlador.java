@@ -1,6 +1,12 @@
 package com.paulc.practicaud1.gui;
 
 
+import com.paulc.practicaud1.base.MusicaPoster;
+import com.paulc.practicaud1.base.ObraPoster;
+import com.paulc.practicaud1.base.PeliculaPoster;
+import com.paulc.practicaud1.base.Poster;
+import com.paulc.practicaud1.util.Util;
+
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
@@ -64,18 +70,23 @@ public class PosterControlador implements ActionListener, ListSelectionListener,
     }
 
     private void limpiarCampos() {
-        vista.matriculaTxt.setText(null);
-        vista.modeloTxt.setText(null);
-        vista.marcaTxt.setText(null);
-        vista.fechaMatriculacionDPicker.setText(null);
-        vista.plazasKmsTxt.setText(null);
-        vista.matriculaTxt.requestFocus();
+        vista.tituloTxt.setText(null);
+        vista.autorTxt.setText(null);
+        vista.dimensionesTxt.setText(null);
+        vista.fechaDataPicker.setText(null);
+        vista.nCopiasTxt.setText(null);
+        vista.publicoCheckBox.setSelected(false);
+        vista.imagen = null;
+        vista.genEstEdiTxt.setText(null);
+        vista.dirGruArtTxt.setText(null);
+        vista.punNacPalTxt.setText(null);
+        vista.tituloTxt.requestFocus();
     }
 
     private void refrescar() {
-        vista.dlmVehiculo.clear();
-        for (Vehiculo vehiculo:modelo.obtenerVehiculos()) {
-            vista.dlmVehiculo.addElement(vehiculo);
+        vista.dlmPoster.clear();
+        for (Poster poster:modelo.obtenerPosters()) {
+            vista.dlmPoster.addElement(poster);
         }
     }
 
@@ -89,7 +100,7 @@ public class PosterControlador implements ActionListener, ListSelectionListener,
 
     private void cargarDatosConfiguracion() throws IOException {
         Properties configuracion = new Properties();
-        configuracion.load(new FileReader("vehiculos.conf"));
+        configuracion.load(new FileReader("posters.conf"));
         ultimaRutaExportada=new File (configuracion.getProperty("ultimaRutaExportada"));
     }
 
@@ -119,17 +130,31 @@ public class PosterControlador implements ActionListener, ListSelectionListener,
     @Override
     public void valueChanged(ListSelectionEvent e) {
         if (e.getValueIsAdjusting()) {
-            Vehiculo vehiculoSeleccionado = (Vehiculo) vista.list1.getSelectedValue();
-            vista.matriculaTxt.setText(vehiculoSeleccionado.getMatricula());
-            vista.marcaTxt.setText(vehiculoSeleccionado.getMarca());
-            vista.modeloTxt.setText(vehiculoSeleccionado.getModelo());
-            vista.fechaMatriculacionDPicker.setDate(vehiculoSeleccionado.getFechaMatriculacion());
-            if (vehiculoSeleccionado instanceof Coche) {
-                vista.cocheRadioButton.doClick();
-                vista.plazasKmsTxt.setText(String.valueOf(((Coche) vehiculoSeleccionado).getNumPlazas()));
+            Poster posterSeleccionado = (Poster) vista.list1.getSelectedValue();
+            vista.tituloTxt.setText(posterSeleccionado.getTitulo());
+            vista.autorTxt.setText(posterSeleccionado.getAutor());
+            vista.dimensionesTxt.setText(posterSeleccionado.getDimensiones());
+            vista.fechaDataPicker.setDate(posterSeleccionado.getFechaCreado());
+            vista.lenguajeTxt.setText(posterSeleccionado.getLenguaje());
+            vista.nCopiasTxt.setText(String.valueOf(posterSeleccionado.getnCopias()));
+            vista.publicoCheckBox.setSelected(posterSeleccionado.isPublico());
+            vista.imagen = posterSeleccionado.getImagen();
+            if (posterSeleccionado instanceof MusicaPoster) {
+                vista.musicaRadioButton.doClick();
+                vista.genEstEdiTxt.setText(((MusicaPoster) posterSeleccionado).getEstilo());
+                vista.dirGruArtTxt.setText(((MusicaPoster) posterSeleccionado).getGrupo());
+                vista.punNacPalTxt.setText(((MusicaPoster) posterSeleccionado).getNacionalidad());
+
+            } else if (posterSeleccionado instanceof ObraPoster){
+                vista.obraRadioButton.doClick();
+                vista.genEstEdiTxt.setText((String.valueOf(((ObraPoster) posterSeleccionado) . getEdicion())));
+                vista.dirGruArtTxt.setText(((ObraPoster) posterSeleccionado).getTipoArte());
+                vista.punNacPalTxt.setText(((ObraPoster) posterSeleccionado).getPaletaColores());
             } else {
-                vista.motoRadioButton.doClick();
-                vista.plazasKmsTxt.setText(String.valueOf(((Moto) vehiculoSeleccionado).getKms()));
+                vista.peliculaRadioButton.doClick();
+                vista.genEstEdiTxt.setText(((PeliculaPoster) posterSeleccionado).getDirector());
+                vista.dirGruArtTxt.setText(((PeliculaPoster) posterSeleccionado).getDirector());
+                vista.punNacPalTxt.setText(String.valueOf(((PeliculaPoster) posterSeleccionado).getPuntuacion()));
             }
         }
     }
@@ -141,19 +166,22 @@ public class PosterControlador implements ActionListener, ListSelectionListener,
             case "Nuevo":
                 if (hayCamposVacios()) {
                     Util.mensajeError("Los siguientes campos no pueden estar vacios \n Matricula\nMarca\nModelo\nFechaMatriculacion\n"
-                            +vista.plazasKmsLbl.getText());
+                            +vista.genEstEdiLbl.getText() +"\n" + vista.dirGruArtLbl.getText() + "\n" + vista.punNacPalLbl.getText());
                     break;
                 }
-                if (modelo.existeMatricula(vista.matriculaTxt.getText())) {
-                    Util.mensajeError("Ya existe un coche con esa matricula\n"+vista.matriculaTxt.getText());
+                if (modelo.existeTitulo(vista.tituloTxt.getText())) {
+                    Util.mensajeError("Ya existe un poster con esa titulo\n"+vista.tituloTxt.getText());
                     break;
                 }
-                if (vista.cocheRadioButton.isSelected()) {
-                    modelo.altaCoche(vista.matriculaTxt.getText(),vista.marcaTxt.getText(),vista.modeloTxt.getText(),
-                            vista.fechaMatriculacionDPicker.getDate(), Integer.parseInt(vista.plazasKmsTxt.getText()));
-                } else {
+                if (vista.musicaRadioButton.isSelected()) {
+                    modelo.altaMusicaPoster(vista.tituloTxt.getText(),vista.autorTxt.getText(),vista.dimensionesTxt.getText(),
+                            vista.fechaDataPicker.getDate(), vista.lenguajeTxt.getText(), Integer.parseInt(vista.nCopiasTxt.getText()),
+                                    vista.publicoCheckBox.isSelected(),vista.imagen,vista.genEstEdiTxt.getText(),vista.dirGruArtTxt.getText(),vista.punNacPalTxt.getText());
+                } else if(vista.obraRadioButton.isSelected()){
                     modelo.altaMoto(vista.matriculaTxt.getText(),vista.marcaTxt.getText(),vista.modeloTxt.getText(),
                             vista.fechaMatriculacionDPicker.getDate(), Double.parseDouble(vista.plazasKmsTxt.getText()));
+                } else {
+
                 }
                 limpiarCampos();
                 refrescar();

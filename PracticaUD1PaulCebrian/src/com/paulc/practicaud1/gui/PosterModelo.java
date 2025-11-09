@@ -29,18 +29,18 @@ public class PosterModelo {
         return listaPosters;
     }
 
-    public void altaMusicaPoster() {
-        MusicaPoster posterMusicaNuevo = new MusicaPoster();
+    public void altaMusicaPoster(String titulo ,String autor ,  String dimensiones ,LocalDate fechaCreado,String lenguaje,int nCopias,boolean publico,String imagen , String estilo, String grupo, String nacionalidad) {
+        MusicaPoster posterMusicaNuevo = new MusicaPoster(titulo,autor,dimensiones,fechaCreado,lenguaje,nCopias,publico,imagen,estilo,grupo,nacionalidad);
         listaPosters.add(posterMusicaNuevo);
     }
 
-    public void altaObraPoster() {
-        ObraPoster posterObraNuevo = new ObraPoster();
+    public void altaObraPoster(String titulo ,String autor ,  String dimensiones ,LocalDate fechaCreado,String lenguaje,int nCopias,boolean publico,String imagen, int edicion, String tipoArte, String paletaColores) {
+        ObraPoster posterObraNuevo = new ObraPoster(titulo,autor,dimensiones,fechaCreado,lenguaje,nCopias,publico,imagen,edicion,tipoArte,paletaColores);
         listaPosters.add(posterObraNuevo);
     }
 
-    public void altaPeliculaPoster() {
-        PeliculaPoster posterPeliculaNuevo = new PeliculaPoster();
+    public void altaPeliculaPoster(String titulo ,String autor ,  String dimensiones ,LocalDate fechaCreado,String lenguaje,int nCopias,boolean publico,String imagen, String genero, String director ,float puntuacion) {
+        PeliculaPoster posterPeliculaNuevo = new PeliculaPoster(titulo,autor,dimensiones,fechaCreado,lenguaje,nCopias,publico,imagen,genero,director,puntuacion);
         listaPosters.add(posterPeliculaNuevo);
     }
 

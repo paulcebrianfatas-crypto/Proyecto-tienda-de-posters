@@ -16,7 +16,7 @@ public class Ventana {
     public JButton nuevoButton;
     public JButton exportarButton;
     public JButton importarButton;
-    private JList list1;
+    public JList list1;
     public JTextField tituloTxt;
     public JTextField autorTxt;
     public JTextField dimensionesTxt;
