@@ -77,6 +77,7 @@ public class PosterControlador implements ActionListener, ListSelectionListener,
         vista.autorTxt.setText(null);
         vista.dimensionesTxt.setText(null);
         vista.fechaDataPicker.setText(null);
+        vista.lenguajeTxt.setText(null);
         vista.nCopiasTxt.setText(null);
         vista.publicoCheckBox.setSelected(false);
         vista.imagen = null;
@@ -206,8 +207,9 @@ public class PosterControlador implements ActionListener, ListSelectionListener,
                     } catch (SAXException ex) {
                         ex.printStackTrace();
 
-                        refrescar();
+
                     }
+                    refrescar();
                 }
                 break;
             }
