@@ -10,9 +10,9 @@ public class Poster {
     private String lenguaje;
     private int nCopias;
     private boolean publico;
-    private String imagen;
+    private byte[] imagen;
 
-    public Poster(String titulo, String autor, String dimensiones, LocalDate fechaCreado, String lenguaje, int nCopias, boolean publico,String imagen) {
+    public Poster(String titulo, String autor, String dimensiones, LocalDate fechaCreado, String lenguaje, int nCopias, boolean publico,byte[] imagen) {
         this.titulo = titulo;
         this.autor = autor;
         this.dimensiones = dimensiones;
@@ -82,11 +82,11 @@ public class Poster {
         this.publico = publico;
     }
 
-    public String getImagen() {
+    public byte[] getImagen() {
         return imagen;
     }
 
-    public void setImagen(String imagen) {
+    public void setImagen(byte[] imagen) {
         this.imagen = imagen;
     }
 }

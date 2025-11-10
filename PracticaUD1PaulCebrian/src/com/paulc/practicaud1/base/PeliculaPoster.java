@@ -7,7 +7,7 @@ public class PeliculaPoster extends Poster {
     private String director;
     private float puntuacion;
 
-    public PeliculaPoster(String titulo, String autor, String dimensiones, LocalDate fechaCreado, String lenguaje, int nCopias, boolean publico, String imagen,
+    public PeliculaPoster(String titulo, String autor, String dimensiones, LocalDate fechaCreado, String lenguaje, int nCopias, boolean publico, byte[] imagen,
                           String genero, String director, float puntuacion) {
         super(titulo, autor, dimensiones, fechaCreado, lenguaje, nCopias, publico,imagen);
         this.genero = genero;

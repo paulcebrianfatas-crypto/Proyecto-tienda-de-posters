@@ -7,7 +7,7 @@ public class MusicaPoster extends Poster{
     private String grupo;
     private String nacionalidad;
 
-    public MusicaPoster(String titulo, String autor, String dimensiones, LocalDate fechaCreado, String lenguaje, int nCopias, boolean publico, String imagen, String estilo, String grupo, String nacionalidad) {
+    public MusicaPoster(String titulo, String autor, String dimensiones, LocalDate fechaCreado, String lenguaje, int nCopias, boolean publico, byte[] imagen, String estilo, String grupo, String nacionalidad) {
         super(titulo, autor, dimensiones, fechaCreado, lenguaje, nCopias, publico, imagen);
         this.estilo = estilo;
         this.grupo = grupo;

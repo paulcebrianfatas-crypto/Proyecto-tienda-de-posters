@@ -17,6 +17,7 @@ import java.io.File;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Base64;
 
 public class PosterModelo {
     private ArrayList<Poster> listaPosters;
@@ -29,17 +30,17 @@ public class PosterModelo {
         return listaPosters;
     }
 
-    public void altaMusicaPoster(String titulo ,String autor ,  String dimensiones ,LocalDate fechaCreado,String lenguaje,int nCopias,boolean publico,String imagen , String estilo, String grupo, String nacionalidad) {
+    public void altaMusicaPoster(String titulo ,String autor ,  String dimensiones ,LocalDate fechaCreado,String lenguaje,int nCopias,boolean publico,byte[] imagen , String estilo, String grupo, String nacionalidad) {
         MusicaPoster posterMusicaNuevo = new MusicaPoster(titulo,autor,dimensiones,fechaCreado,lenguaje,nCopias,publico,imagen,estilo,grupo,nacionalidad);
         listaPosters.add(posterMusicaNuevo);
     }
 
-    public void altaObraPoster(String titulo ,String autor ,  String dimensiones ,LocalDate fechaCreado,String lenguaje,int nCopias,boolean publico,String imagen, int edicion, String tipoArte, String paletaColores) {
+    public void altaObraPoster(String titulo ,String autor ,  String dimensiones ,LocalDate fechaCreado,String lenguaje,int nCopias,boolean publico,byte[] imagen, int edicion, String tipoArte, String paletaColores) {
         ObraPoster posterObraNuevo = new ObraPoster(titulo,autor,dimensiones,fechaCreado,lenguaje,nCopias,publico,imagen,edicion,tipoArte,paletaColores);
         listaPosters.add(posterObraNuevo);
     }
 
-    public void altaPeliculaPoster(String titulo ,String autor ,  String dimensiones ,LocalDate fechaCreado,String lenguaje,int nCopias,boolean publico,String imagen, String genero, String director ,float puntuacion) {
+    public void altaPeliculaPoster(String titulo ,String autor ,  String dimensiones ,LocalDate fechaCreado,String lenguaje,int nCopias,boolean publico,byte[] imagen, String genero, String director ,float puntuacion) {
         PeliculaPoster posterPeliculaNuevo = new PeliculaPoster(titulo,autor,dimensiones,fechaCreado,lenguaje,nCopias,publico,imagen,genero,director,puntuacion);
         listaPosters.add(posterPeliculaNuevo);
     }
@@ -51,6 +52,14 @@ public class PosterModelo {
             }
         }
         return false;
+    }
+    public byte[] stringToBase64(String base64) {
+         return  Base64.getDecoder().decode(base64);
+    }
+
+    public String base64ToString(byte[] imagen){
+
+        return Base64.getEncoder().encodeToString(imagen);
     }
 
     public void exportarXML(File fichero) throws ParserConfigurationException, TransformerException {
@@ -125,7 +134,7 @@ public class PosterModelo {
             nodoDatos = documento.createElement("imagen");
             nodoPoster.appendChild(nodoDatos);
 
-            texto = documento.createTextNode(unPoster.getImagen());
+            texto = documento.createTextNode(base64ToString(unPoster.getImagen()));
             nodoDatos.appendChild(texto);
 
             if (unPoster instanceof MusicaPoster) {
@@ -217,7 +226,7 @@ public class PosterModelo {
                 nuevaMusicaPoster.setLenguaje(nodoPoster.getChildNodes().item(4).getTextContent());
                 nuevaMusicaPoster.setnCopias(Integer.parseInt(nodoPoster.getChildNodes().item(5).getTextContent()));
                 nuevaMusicaPoster.setPublico(Boolean.parseBoolean(nodoPoster.getChildNodes().item(6).getTextContent()));
-                nuevaMusicaPoster.setImagen(nodoPoster.getChildNodes().item(7).getTextContent());
+                nuevaMusicaPoster.setImagen(stringToBase64(nodoPoster.getChildNodes().item(7).getTextContent()));
                 nuevaMusicaPoster.setEstilo(nodoPoster.getChildNodes().item(8).getTextContent());
                 nuevaMusicaPoster.setGrupo(nodoPoster.getChildNodes().item(9).getTextContent());
                 nuevaMusicaPoster.setNacionalidad(nodoPoster.getChildNodes().item(10).getTextContent());
@@ -232,7 +241,7 @@ public class PosterModelo {
                 nuevaObraPoster.setLenguaje(nodoPoster.getChildNodes().item(4).getTextContent());
                 nuevaObraPoster.setnCopias(Integer.parseInt(nodoPoster.getChildNodes().item(5).getTextContent()));
                 nuevaObraPoster.setPublico(Boolean.parseBoolean(nodoPoster.getChildNodes().item(6).getTextContent()));
-                nuevaObraPoster.setImagen(nodoPoster.getChildNodes().item(7).getTextContent());
+                nuevaObraPoster.setImagen(stringToBase64(nodoPoster.getChildNodes().item(7).getTextContent()));
                 nuevaObraPoster.setEdicion(Integer.parseInt(nodoPoster.getChildNodes().item(8).getTextContent()));
                 nuevaObraPoster.setTipoArte(nodoPoster.getChildNodes().item(9).getTextContent());
                 nuevaObraPoster.setPaletaColores(nodoPoster.getChildNodes().item(10).getTextContent());
@@ -248,7 +257,7 @@ public class PosterModelo {
                 nuevaPeliculaPoster.setLenguaje(nodoPoster.getChildNodes().item(4).getTextContent());
                 nuevaPeliculaPoster.setnCopias(Integer.parseInt(nodoPoster.getChildNodes().item(5).getTextContent()));
                 nuevaPeliculaPoster.setPublico(Boolean.parseBoolean(nodoPoster.getChildNodes().item(6).getTextContent()));
-                nuevaPeliculaPoster.setImagen(nodoPoster.getChildNodes().item(7).getTextContent());
+                nuevaPeliculaPoster.setImagen(stringToBase64(nodoPoster.getChildNodes().item(7).getTextContent()));
                 nuevaPeliculaPoster.setGenero(nodoPoster.getChildNodes().item(8).getTextContent());
                 nuevaPeliculaPoster.setDirector(nodoPoster.getChildNodes().item(9).getTextContent());
                 nuevaPeliculaPoster.setPuntuacion(Float.parseFloat(nodoPoster.getChildNodes().item(10).getTextContent()));
@@ -258,4 +267,6 @@ public class PosterModelo {
         }
 
     }
+
+
 }

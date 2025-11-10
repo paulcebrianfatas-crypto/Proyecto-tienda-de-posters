@@ -1,7 +1,7 @@
 
-`
-java:S1128">Remove this unused import 'com.paulc.practicaud1.base.Poster'.(Ûã®äúÿÿÿÿ8æ¦æ¦3
 a
 java:S1854"?Remove this useless assignment to local variable "controlador".(·“£Şùÿÿÿÿ8æ¦æ¦3
+`
+java:S1128">Remove this unused import 'com.paulc.practicaud1.base.Poster'.(Ûã®äúÿÿÿÿ8æ¦æ¦3
 R
 java:S1481"0Remove this unused "controlador" local variable.(·“£Şùÿÿÿÿ8æ¦æ¦3

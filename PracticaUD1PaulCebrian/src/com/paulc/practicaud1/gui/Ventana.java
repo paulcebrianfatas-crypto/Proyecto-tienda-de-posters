@@ -29,7 +29,7 @@ public class Ventana {
     public JLabel dirGruArtLbl;
     public JTextField genEstEdiTxt;
     public JLabel punNacPalLbl;
-    public String imagen;
+    public byte[] imagen;
 
     public JFrame frame;
     public DefaultListModel<Poster> dlmPoster;

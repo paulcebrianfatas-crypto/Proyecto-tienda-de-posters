@@ -13,11 +13,13 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.io.*;
+import java.nio.file.Files;
 import java.util.Properties;
 
 public class PosterControlador implements ActionListener, ListSelectionListener, WindowListener {
@@ -62,7 +64,7 @@ public class PosterControlador implements ActionListener, ListSelectionListener,
                 vista.genEstEdiTxt.getText().isEmpty() ||
                 vista.dirGruArtTxt.getText().isEmpty() ||
                 vista.punNacPalTxt.getText().isEmpty() ||
-                vista.imagen.isEmpty()) {
+                vista.imagen == null) {
 
 
             return true;
@@ -224,22 +226,59 @@ public class PosterControlador implements ActionListener, ListSelectionListener,
                 }
                 break;
             }
-            case "MusicaPoster": {
+            case "Insertar Imagen":{
+                JFileChooser selectorFichero3 = Util.crearSelectorFicheros(ultimaRutaExportada, "Imagen PNG", "png");
+                int opc = selectorFichero3.showOpenDialog(null);
+                if (opc == JFileChooser.APPROVE_OPTION) {
+                    File archivoSelecionado = selectorFichero3.getSelectedFile();
+                    try {
+                        byte[] bytesImagen = Files.readAllBytes(archivoSelecionado.toPath());
+                        vista.imagen = bytesImagen;
+
+                        Util.mensajeExtra("Imagen importada correctamente:\n" + archivoSelecionado.getName());
+                    } catch (IOException ex) {
+                        Util.mensajeError("Error al leer la imagen: " +ex.getMessage());
+                    }
+                    }
+            }
+            case "Mostrar Imagen":{
+                if (vista.imagen!=null) {
+
+                    try {
+                        ImageIcon icon = new ImageIcon(vista.imagen);
+                        String[] dimensions = vista.dimensionesTxt.getText().split("x");
+                        int wight = Integer.parseInt(dimensions[0]) ;
+                        int height = Integer.parseInt(dimensions[1]) ;
+
+                        Image imagenEscalada = icon.getImage().getScaledInstance(wight,height,Image.SCALE_SMOOTH);
+
+                        Util.verImagen(imagenEscalada);
+
+                    } catch (Exception e1){
+                        Util.mensajeError("Dimensiones tiene mal formato: wight x height");
+                    }
+
+                } else {
+                    Util.mensajeError("Error al mostrar la imagen: No hay imagen selecionada");
+                }
+            }
+
+            case "Musica": {
                 vista.genEstEdiLbl.setText("Estilo");
-                vista.dirGruArtTxt.setText("Grupo");
-                vista.punNacPalTxt.setText("Nacionalidad");
+                vista.dirGruArtLbl.setText("Grupo");
+                vista.punNacPalLbl.setText("Nacionalidad");
                 break;
             }
-            case "ObraPoster": {
+            case "Obra de Arte": {
                 vista.genEstEdiLbl.setText("Edicion");
-                vista.dirGruArtTxt.setText("Tipo de arte");
-                vista.punNacPalTxt.setText("Paleta de colores");
+                vista.dirGruArtLbl.setText("Tipo de arte");
+                vista.punNacPalLbl.setText("Paleta de colores");
                 break;
             }
-            case "PeliculaPoster": {
+            case "Pelicula": {
                 vista.genEstEdiLbl.setText("Genero");
-                vista.dirGruArtTxt.setText("Director");
-                vista.punNacPalTxt.setText("Puntuacion");
+                vista.dirGruArtLbl.setText("Director");
+                vista.punNacPalLbl.setText("Puntuacion");
                 break;
             }
 

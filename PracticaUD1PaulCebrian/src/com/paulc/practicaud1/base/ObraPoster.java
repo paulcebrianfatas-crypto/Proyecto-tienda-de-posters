@@ -7,7 +7,7 @@ public class ObraPoster extends Poster{
     private String tipoArte;
     private String paletaColores;
 
-    public ObraPoster(String titulo, String autor, String dimensiones, LocalDate fechaCreado, String lenguaje, int nCopias, boolean publico, String imagen, int edicion, String tipoArte, String paletaColores) {
+    public ObraPoster(String titulo, String autor, String dimensiones, LocalDate fechaCreado, String lenguaje, int nCopias, boolean publico, byte[] imagen, int edicion, String tipoArte, String paletaColores) {
         super(titulo, autor, dimensiones, fechaCreado, lenguaje, nCopias, publico, imagen);
         this.edicion = edicion;
         this.tipoArte = tipoArte;
