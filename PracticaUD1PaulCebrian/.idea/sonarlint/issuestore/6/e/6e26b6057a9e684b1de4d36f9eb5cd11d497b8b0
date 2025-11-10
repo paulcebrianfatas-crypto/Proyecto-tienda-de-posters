@@ -1,16 +1,16 @@
 
-^	java:S107 "=Method has 11 parameters, which is greater than 7 authorized.(ÄğÂÜûÿÿÿÿ8À‡¬Ğ¦3
-|
-java:S2293Å"YReplace the type specification in this constructor call with the diamond operator ("<>").(‘·¶»ûÿÿÿÿ8…é‰Ã¦3
-P
-java:S27559"3Disable access to external entities in XML parsing.(ğ¨ºî8…é‰Ã¦3
 
 java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(Ï°Ö©8…é‰Ã¦3
-Y	java:S107*"=Method has 11 parameters, which is greater than 7 authorized.(ˆ¼è±8ó¦®Ğ¦3
-Q
-java:S2755À"3Disable access to external entities in XML parsing.(Ò‹ñÙ8…é‰Ã¦3
-Q
-java:S2755Ê"3Disable access to external entities in XML parsing.(ğ¨ºî8…é‰Ã¦3
 {
 java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(‘·¶»ûÿÿÿÿ8…é‰Ã¦3
+|
+java:S2293Å"YReplace the type specification in this constructor call with the diamond operator ("<>").(‘·¶»ûÿÿÿÿ8…é‰Ã¦3
+Q
+java:S2755À"3Disable access to external entities in XML parsing.(Ò‹ñÙ8…é‰Ã¦3
 Y	java:S107%"=Method has 11 parameters, which is greater than 7 authorized.(§ËªØ8ü“®Ğ¦3
+^	java:S107 "=Method has 11 parameters, which is greater than 7 authorized.(ÄğÂÜûÿÿÿÿ8À‡¬Ğ¦3
+Y	java:S107*"=Method has 11 parameters, which is greater than 7 authorized.(ˆ¼è±8ó¦®Ğ¦3
+P
+java:S27559"3Disable access to external entities in XML parsing.(ğ¨ºî8…é‰Ã¦3
+Q
+java:S2755Ê"3Disable access to external entities in XML parsing.(ğ¨ºî8…é‰Ã¦3

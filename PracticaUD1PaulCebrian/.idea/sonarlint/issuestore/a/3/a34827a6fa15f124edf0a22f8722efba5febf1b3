@@ -1,28 +1,37 @@
 
 ¤
-java:S1186÷"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Šá® şÿÿÿÿ8‡ƒÃ¦3
-F	java:S108·")Either remove or fill this block of code.(å¥‡8‘ÇÕÑ¦3
+java:S1186ş"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Š¿˜¶ûÿÿÿÿ8‡ƒÃ¦3
+P
+java:S1199ï"-Extract this nested code block into a method.(ëğ¶ğüÿÿÿÿ8ÄÖ‡æ¦3
+U	java:S106#"9Replace this use of System.out or System.err by a logger.(­Ç¨Ú8‡ƒÃ¦3
 ¤
-java:S1186ü"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ô—»ûÿÿÿÿ8‡ƒÃ¦3
-
-java:S1186í"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Æ†êC8‡ƒÃ¦3
-c
-java:S2147Å"ECombine this catch with the one at line 195, which has the same body.(Ãôş•8‡ƒÃ¦3
+java:S1186‰"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(›ĞêÕûÿÿÿÿ8‡ƒÃ¦3
+P
+java:S1199é"-Extract this nested code block into a method.(ÍÃóéüÿÿÿÿ8¯¨‡æ¦3
 u
-java:S3776£"RRefactor this method to reduce its Cognitive Complexity from 28 to the 15 allowed.(¼ Òşüÿÿÿÿ8‡ƒÃ¦3
-U	java:S106""9Replace this use of System.out or System.err by a logger.(­Ç¨Ú8‡ƒÃ¦3
-Ÿ
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(£íÂ´8‡ƒÃ¦3
-d
-java:S2095g"HUse try-with-resources or close this "FileReader" in a "finally" clause.(šË²88‡ƒÃ¦3
-¤
-java:S1186ç"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Š¿˜¶ûÿÿÿÿ8‡ƒÃ¦3
-?	java:S131¥""Add a default case to this switch.(Â¹½8‡ƒÃ¦3
-¤
-java:S1186ò"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(›ĞêÕûÿÿÿÿ8‡ƒÃ¦3
+java:S3776¤"RRefactor this method to reduce its Cognitive Complexity from 28 to the 15 allowed.(¼ Òşüÿÿÿÿ8‡ƒÃ¦3
+?	java:S131¦""Add a default case to this switch.(Â¹½8‡ƒÃ¦3
+P
+java:S1199ã"-Extract this nested code block into a method.(ŒÆÜ°şÿÿÿÿ8Å–†æ¦3
 c
-java:S11267"AReplace this if-then-else statement by a single return statement.(ûÈï™ÿÿÿÿÿ8‡ƒÃ¦3
+java:S11268"AReplace this if-then-else statement by a single return statement.(ûÈï™ÿÿÿÿÿ8‡ƒÃ¦3
+d
+java:S2095h"HUse try-with-resources or close this "FileReader" in a "finally" clause.(šË²88‡ƒÃ¦3
+P
+java:S1199Â"-Extract this nested code block into a method.( …®òüÿÿÿÿ8‡ÿƒæ¦3
+
+java:S1186„"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Æ†êC8‡ƒÃ¦3
+P
+java:S1199Ô"-Extract this nested code block into a method.(—ë«ºúÿÿÿÿ8·İ…æ¦3
 b
-java:S2147Ö"ECombine this catch with the one at line 212, which has the same body.(İ£½}8‡ƒÃ¦3
+java:S2147İ"ECombine this catch with the one at line 219, which has the same body.(İ£½}8‡ƒÃ¦3
 k
-java:S2095r"IUse try-with-resources or close this "PrintWriter" in a "finally" clause.(Â¸š¥ÿÿÿÿÿ8‡ƒÃ¦3
+java:S2095s"IUse try-with-resources or close this "PrintWriter" in a "finally" clause.(Â¸š¥ÿÿÿÿÿ8‡ƒÃ¦3
+¤
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Šá® şÿÿÿÿ8‡ƒÃ¦3
+Ÿ
+java:S1186˜"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(£íÂ´8‡ƒÃ¦3
+c
+java:S2147Ê"ECombine this catch with the one at line 200, which has the same body.(Ãôş•8‡ƒÃ¦3
+¤
+java:S1186“"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ô—»ûÿÿÿÿ8‡ƒÃ¦3

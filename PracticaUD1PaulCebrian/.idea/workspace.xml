@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9675de6f-7c0a-4630-9a61-04b4c4cad202" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/posters.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PracticaUD1PaulCebrian/com/paulc/practicaud1/Principal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PracticaUD1PaulCebrian/com/paulc/practicaud1/Principal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PracticaUD1PaulCebrian/com/paulc/practicaud1/gui/PosterControlador.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PracticaUD1PaulCebrian/com/paulc/practicaud1/gui/PosterControlador.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PracticaUD1PaulCebrian/com/paulc/practicaud1/gui/PosterModelo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PracticaUD1PaulCebrian/com/paulc/practicaud1/gui/PosterModelo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PracticaUD1PaulCebrian/com/paulc/practicaud1/gui/Ventana.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PracticaUD1PaulCebrian/com/paulc/practicaud1/gui/Ventana.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PracticaUD1PaulCebrian/com/paulc/practicaud1/util/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PracticaUD1PaulCebrian/com/paulc/practicaud1/util/Util.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/paulc/practicaud1/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/paulc/practicaud1/Principal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/paulc/practicaud1/gui/PosterControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/paulc/practicaud1/gui/PosterControlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/paulc/practicaud1/gui/PosterModelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/paulc/practicaud1/gui/PosterModelo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/paulc/practicaud1/gui/Ventana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/paulc/practicaud1/gui/Ventana.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/paulc/practicaud1/gui/Ventana.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/paulc/practicaud1/gui/Ventana.form" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -114,6 +120,7 @@
       <workItem from="1762604144934" duration="4577000" />
       <workItem from="1762625822998" duration="2889000" />
       <workItem from="1762686665101" duration="10020000" />
+      <workItem from="1762758862223" duration="3106000" />
     </task>
     <servers />
   </component>

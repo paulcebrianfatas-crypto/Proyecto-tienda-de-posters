@@ -6,6 +6,7 @@ import com.paulc.practicaud1.base.ObraPoster;
 import com.paulc.practicaud1.base.PeliculaPoster;
 import com.paulc.practicaud1.base.Poster;
 import com.paulc.practicaud1.util.Util;
+import org.xml.sax.SAXException;
 
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
@@ -101,7 +102,7 @@ public class PosterControlador implements ActionListener, ListSelectionListener,
     private void cargarDatosConfiguracion() throws IOException {
         Properties configuracion = new Properties();
         configuracion.load(new FileReader("posters.conf"));
-        ultimaRutaExportada=new File (configuracion.getProperty("ultimaRutaExportada"));
+        ultimaRutaExportada=new File (configuracion.getProperty("ultimaRutaExportado"));
     }
 
     private void actualizarDatosConfiguracion(File ultimaRutaExportada) {
@@ -176,20 +177,24 @@ public class PosterControlador implements ActionListener, ListSelectionListener,
                 if (vista.musicaRadioButton.isSelected()) {
                     modelo.altaMusicaPoster(vista.tituloTxt.getText(),vista.autorTxt.getText(),vista.dimensionesTxt.getText(),
                             vista.fechaDataPicker.getDate(), vista.lenguajeTxt.getText(), Integer.parseInt(vista.nCopiasTxt.getText()),
-                                    vista.publicoCheckBox.isSelected(),vista.imagen,vista.genEstEdiTxt.getText(),vista.dirGruArtTxt.getText(),vista.punNacPalTxt.getText());
+                            vista.publicoCheckBox.isSelected(),vista.imagen,vista.genEstEdiTxt.getText(),vista.dirGruArtTxt.getText(),vista.punNacPalTxt.getText());
                 } else if(vista.obraRadioButton.isSelected()){
-                    modelo.altaMoto(vista.matriculaTxt.getText(),vista.marcaTxt.getText(),vista.modeloTxt.getText(),
-                            vista.fechaMatriculacionDPicker.getDate(), Double.parseDouble(vista.plazasKmsTxt.getText()));
+                    modelo.altaObraPoster(vista.tituloTxt.getText(),vista.autorTxt.getText(),vista.dimensionesTxt.getText(),
+                            vista.fechaDataPicker.getDate(), vista.lenguajeTxt.getText(), Integer.parseInt(vista.nCopiasTxt.getText()),
+                            vista.publicoCheckBox.isSelected(),vista.imagen,Integer.parseInt(vista.genEstEdiTxt.getText()),vista.dirGruArtTxt.getText(),vista.punNacPalTxt.getText());
                 } else {
-
+                    modelo.altaPeliculaPoster(vista.tituloTxt.getText(),vista.autorTxt.getText(),vista.dimensionesTxt.getText(),
+                            vista.fechaDataPicker.getDate(), vista.lenguajeTxt.getText(), Integer.parseInt(vista.nCopiasTxt.getText()),
+                            vista.publicoCheckBox.isSelected(),vista.imagen,vista.genEstEdiTxt.getText(),vista.dirGruArtTxt.getText(),
+                            Float.parseFloat(vista.punNacPalTxt.getText()) );
                 }
                 limpiarCampos();
                 refrescar();
                 break;
-            case "Importar":
-                JFileChooser selectorFichero = Util.crearSelectorFichero(ultimaRutaExportada,"Archivos XML","xml");
-                int opt=selectorFichero.showOpenDialog(null);
-                if (opt==JFileChooser.APPROVE_OPTION) {
+            case "Importar": {
+                JFileChooser selectorFichero = Util.crearSelectorFicheros(ultimaRutaExportada, "Archivos XML", "xml");
+                int opt = selectorFichero.showOpenDialog(null);
+                if (opt == JFileChooser.APPROVE_OPTION) {
                     try {
                         modelo.importarXML(selectorFichero.getSelectedFile());
                     } catch (ParserConfigurationException ex) {
@@ -198,14 +203,16 @@ public class PosterControlador implements ActionListener, ListSelectionListener,
                         ex.printStackTrace();
                     } catch (SAXException ex) {
                         ex.printStackTrace();
+
+                        refrescar();
                     }
-                    refrescar();
                 }
                 break;
-            case "Exportar":
-                JFileChooser selectorFichero2 = Util.crearSelectorFichero(ultimaRutaExportada,"Archivos XML","xml");
-                int opt2=selectorFichero2.showSaveDialog(null);
-                if (opt2==JFileChooser.APPROVE_OPTION) {
+            }
+            case "Exportar": {
+                JFileChooser selectorFichero2 = Util.crearSelectorFicheros(ultimaRutaExportada, "Archivos XML", "xml");
+                int opt2 = selectorFichero2.showSaveDialog(null);
+                if (opt2 == JFileChooser.APPROVE_OPTION) {
                     try {
                         modelo.exportarXML(selectorFichero2.getSelectedFile());
                         actualizarDatosConfiguracion(selectorFichero2.getSelectedFile());
@@ -216,12 +223,28 @@ public class PosterControlador implements ActionListener, ListSelectionListener,
                     }
                 }
                 break;
-            case "Moto":
-                vista.plazasKmsLbl.setText("Kms");
+            }
+            case "MusicaPoster": {
+                vista.genEstEdiLbl.setText("Estilo");
+                vista.dirGruArtTxt.setText("Grupo");
+                vista.punNacPalTxt.setText("Nacionalidad");
                 break;
-            case "Coche":
-                vista.plazasKmsLbl.setText("N Plazas");
+            }
+            case "ObraPoster": {
+                vista.genEstEdiLbl.setText("Edicion");
+                vista.dirGruArtTxt.setText("Tipo de arte");
+                vista.punNacPalTxt.setText("Paleta de colores");
                 break;
+            }
+            case "PeliculaPoster": {
+                vista.genEstEdiLbl.setText("Genero");
+                vista.dirGruArtTxt.setText("Director");
+                vista.punNacPalTxt.setText("Puntuacion");
+                break;
+            }
+
+
+
         }
     }
 

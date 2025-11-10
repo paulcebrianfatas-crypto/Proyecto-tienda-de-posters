@@ -21,3 +21,5 @@ b
 0src/com/paulc/practicaud1/base/MusicaPoster.java,6\0\60ad4028fccea0f0f0945e716c91f117457ea03b
 ^
 .src/com/paulc/practicaud1/base/ObraPoster.java,6\4\643f2536153881d7a423284ef7515a2668113d04
+<
+posters.conf,f\a\fa0b9ba406fdbec7c81100324684fe3c4e63b278
