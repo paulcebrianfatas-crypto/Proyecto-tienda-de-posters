@@ -57,7 +57,7 @@ public class PosterControlador implements ActionListener, ListSelectionListener,
     private boolean hayCamposVacios() {
         if (vista.tituloTxt.getText().isEmpty() ||
                 vista.autorTxt.getText().isEmpty() ||
-                vista.dimensionesTxt.getText().isEmpty() ||
+                vista.dimensionesComboBox.getSelectedItem() == null||
                 vista.fechaDataPicker.getText().isEmpty() ||
                 vista.lenguajeTxt.getText().isEmpty() ||
                 vista.nCopiasTxt.getText().isEmpty() ||
@@ -75,7 +75,7 @@ public class PosterControlador implements ActionListener, ListSelectionListener,
     private void limpiarCampos() {
         vista.tituloTxt.setText(null);
         vista.autorTxt.setText(null);
-        vista.dimensionesTxt.setText(null);
+        vista.dimensionesComboBox.setSelectedIndex(0);
         vista.fechaDataPicker.setText(null);
         vista.lenguajeTxt.setText(null);
         vista.nCopiasTxt.setText(null);
@@ -89,7 +89,8 @@ public class PosterControlador implements ActionListener, ListSelectionListener,
 
     private void refrescar() {
         vista.dlmPoster.clear();
-        for (Poster poster:modelo.obtenerPosters()) {
+        modelo.ordenar();
+        for (Poster poster : modelo.getListaPosters()) {
             vista.dlmPoster.addElement(poster);
         }
     }
@@ -137,7 +138,7 @@ public class PosterControlador implements ActionListener, ListSelectionListener,
             Poster posterSeleccionado = (Poster) vista.list1.getSelectedValue();
             vista.tituloTxt.setText(posterSeleccionado.getTitulo());
             vista.autorTxt.setText(posterSeleccionado.getAutor());
-            vista.dimensionesTxt.setText(posterSeleccionado.getDimensiones());
+            vista.dimensionesComboBox.setSelectedItem(posterSeleccionado.getDimensiones());
             vista.fechaDataPicker.setDate(posterSeleccionado.getFechaCreado());
             vista.lenguajeTxt.setText(posterSeleccionado.getLenguaje());
             vista.nCopiasTxt.setText(String.valueOf(posterSeleccionado.getnCopias()));
@@ -178,15 +179,15 @@ public class PosterControlador implements ActionListener, ListSelectionListener,
                     break;
                 }
                 if (vista.musicaRadioButton.isSelected()) {
-                    modelo.altaMusicaPoster(vista.tituloTxt.getText(),vista.autorTxt.getText(),vista.dimensionesTxt.getText(),
+                    modelo.altaMusicaPoster(vista.tituloTxt.getText(),vista.autorTxt.getText(),vista.dimensionesComboBox.getSelectedItem().toString(),
                             vista.fechaDataPicker.getDate(), vista.lenguajeTxt.getText(), Integer.parseInt(vista.nCopiasTxt.getText()),
                             vista.publicoCheckBox.isSelected(),vista.imagen,vista.genEstEdiTxt.getText(),vista.dirGruArtTxt.getText(),vista.punNacPalTxt.getText());
                 } else if(vista.obraRadioButton.isSelected()){
-                    modelo.altaObraPoster(vista.tituloTxt.getText(),vista.autorTxt.getText(),vista.dimensionesTxt.getText(),
+                    modelo.altaObraPoster(vista.tituloTxt.getText(),vista.autorTxt.getText(),vista.dimensionesComboBox.getSelectedItem().toString(),
                             vista.fechaDataPicker.getDate(), vista.lenguajeTxt.getText(), Integer.parseInt(vista.nCopiasTxt.getText()),
                             vista.publicoCheckBox.isSelected(),vista.imagen,Integer.parseInt(vista.genEstEdiTxt.getText()),vista.dirGruArtTxt.getText(),vista.punNacPalTxt.getText());
                 } else {
-                    modelo.altaPeliculaPoster(vista.tituloTxt.getText(),vista.autorTxt.getText(),vista.dimensionesTxt.getText(),
+                    modelo.altaPeliculaPoster(vista.tituloTxt.getText(),vista.autorTxt.getText(),vista.dimensionesComboBox.getSelectedItem().toString(),
                             vista.fechaDataPicker.getDate(), vista.lenguajeTxt.getText(), Integer.parseInt(vista.nCopiasTxt.getText()),
                             vista.publicoCheckBox.isSelected(),vista.imagen,vista.genEstEdiTxt.getText(),vista.dirGruArtTxt.getText(),
                             Float.parseFloat(vista.punNacPalTxt.getText()) );
@@ -248,7 +249,7 @@ public class PosterControlador implements ActionListener, ListSelectionListener,
 
                     try {
                         ImageIcon icon = new ImageIcon(vista.imagen);
-                        String[] dimensions = vista.dimensionesTxt.getText().split("x");
+                        String[] dimensions = vista.dimensionesComboBox.getSelectedItem().toString().split("x");
                         int wight = Integer.parseInt(dimensions[0]) ;
                         int height = Integer.parseInt(dimensions[1]) ;
 
@@ -283,6 +284,7 @@ public class PosterControlador implements ActionListener, ListSelectionListener,
                 vista.punNacPalLbl.setText("Puntuacion");
                 break;
             }
+
 
 
 

@@ -18,6 +18,8 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Base64;
+import java.util.Comparator;
+import java.util.HashMap;
 
 public class PosterModelo {
     private ArrayList<Poster> listaPosters;
@@ -26,11 +28,11 @@ public class PosterModelo {
         listaPosters = new ArrayList<Poster>();
     }
 
-    public ArrayList<Poster> obtenerPosters() {
+    public ArrayList<Poster> getListaPosters() {
         return listaPosters;
     }
 
-    public void altaMusicaPoster(String titulo ,String autor ,  String dimensiones ,LocalDate fechaCreado,String lenguaje,int nCopias,boolean publico,byte[] imagen , String estilo, String grupo, String nacionalidad) {
+    public void altaMusicaPoster(String titulo , String autor , String dimensiones , LocalDate fechaCreado, String lenguaje, int nCopias, boolean publico, byte[] imagen , String estilo, String grupo, String nacionalidad) {
         MusicaPoster posterMusicaNuevo = new MusicaPoster(titulo,autor,dimensiones,fechaCreado,lenguaje,nCopias,publico,imagen,estilo,grupo,nacionalidad);
         listaPosters.add(posterMusicaNuevo);
     }
@@ -269,4 +271,7 @@ public class PosterModelo {
     }
 
 
+    public void ordenar(){
+        this.listaPosters.sort(Comparator.comparing(Poster::getTitulo));
+    }
 }
