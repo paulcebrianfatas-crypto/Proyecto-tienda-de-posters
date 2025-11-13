@@ -52,6 +52,7 @@ public class PosterControlador implements ActionListener, ListSelectionListener,
         vista.musicaRadioButton.addActionListener(listener);
         vista.obraRadioButton.addActionListener(listener);
         vista.peliculaRadioButton.addActionListener(listener);
+        vista.actualizarButton.addActionListener(listener);
     }
 
     private boolean hayCamposVacios() {
@@ -175,7 +176,7 @@ public class PosterControlador implements ActionListener, ListSelectionListener,
                     break;
                 }
                 if (modelo.existeTitulo(vista.tituloTxt.getText())) {
-                    Util.mensajeError("Ya existe un poster con esa titulo\n"+vista.tituloTxt.getText());
+                    Util.mensajeError("Ya existe un poster con ese titulo\n"+vista.tituloTxt.getText());
                     break;
                 }
                 if (vista.musicaRadioButton.isSelected()) {
@@ -264,6 +265,43 @@ public class PosterControlador implements ActionListener, ListSelectionListener,
                 } else {
                     Util.mensajeError("Error al mostrar la imagen: No hay imagen selecionada");
                 }
+            }
+            case "Actualizar": {
+                if (hayCamposVacios()) {
+                    Util.mensajeError("Los siguientes campos no pueden estar vacios \n Matricula\nMarca\nModelo\nFechaMatriculacion\n"
+                            +vista.genEstEdiLbl.getText() +"\n" + vista.dirGruArtLbl.getText() + "\n" + vista.punNacPalLbl.getText());
+                    break;
+                }
+                Poster poster;
+                poster = new Poster(vista.tituloTxt.getText(), vista.autorTxt.getText(), vista.dimensionesComboBox.getSelectedItem().toString(),
+                        vista.fechaDataPicker.getDate(), vista.lenguajeTxt.getText(), Integer.parseInt(vista.nCopiasTxt.getText()),
+                        vista.publicoCheckBox.isSelected(), vista.imagen);
+                if (modelo.actualizar(poster)) {
+                    if (vista.musicaRadioButton.isSelected()) {
+                        modelo.altaMusicaPoster(vista.tituloTxt.getText(), vista.autorTxt.getText(), vista.dimensionesComboBox.getSelectedItem().toString(),
+                                vista.fechaDataPicker.getDate(), vista.lenguajeTxt.getText(), Integer.parseInt(vista.nCopiasTxt.getText()),
+                                vista.publicoCheckBox.isSelected(), vista.imagen, vista.genEstEdiTxt.getText(), vista.dirGruArtTxt.getText(), vista.punNacPalTxt.getText());
+                        limpiarCampos();
+                        refrescar();
+                    } else if (vista.obraRadioButton.isSelected()) {
+                        modelo.altaObraPoster(vista.tituloTxt.getText(), vista.autorTxt.getText(), vista.dimensionesComboBox.getSelectedItem().toString(),
+                                vista.fechaDataPicker.getDate(), vista.lenguajeTxt.getText(), Integer.parseInt(vista.nCopiasTxt.getText()),
+                                vista.publicoCheckBox.isSelected(), vista.imagen, Integer.parseInt(vista.genEstEdiTxt.getText()), vista.dirGruArtTxt.getText(), vista.punNacPalTxt.getText());
+                        limpiarCampos();
+                        refrescar();
+                    } else {
+                        modelo.altaPeliculaPoster(vista.tituloTxt.getText(), vista.autorTxt.getText(), vista.dimensionesComboBox.getSelectedItem().toString(),
+                                vista.fechaDataPicker.getDate(), vista.lenguajeTxt.getText(), Integer.parseInt(vista.nCopiasTxt.getText()),
+                                vista.publicoCheckBox.isSelected(), vista.imagen, vista.genEstEdiTxt.getText(), vista.dirGruArtTxt.getText(),
+                                Float.parseFloat(vista.punNacPalTxt.getText()));
+                        limpiarCampos();
+                        refrescar();
+                    }
+                } else{
+                    Util.mensajeError("Error al modificar el mensaje, no se encontro ese titulo de poster");
+                }
+
+                break;
             }
 
             case "Musica": {

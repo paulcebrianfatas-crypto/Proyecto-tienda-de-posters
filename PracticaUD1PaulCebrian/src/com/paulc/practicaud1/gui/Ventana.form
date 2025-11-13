@@ -35,6 +35,10 @@
     <rowspec value="top:4dlu:noGrow"/>
     <rowspec value="center:max(d;4px):noGrow"/>
     <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
     <rowspec value="center:d:grow"/>
     <colspec value="fill:d:grow"/>
     <colspec value="left:4dlu:noGrow"/>
@@ -87,6 +91,7 @@
           <forms/>
         </constraints>
         <properties>
+          <font name="Calibri" size="18"/>
           <text value="Titulo"/>
         </properties>
       </component>
@@ -96,6 +101,7 @@
           <forms/>
         </constraints>
         <properties>
+          <font name="Calibri" size="18"/>
           <text value="Autor"/>
         </properties>
       </component>
@@ -105,6 +111,7 @@
           <forms/>
         </constraints>
         <properties>
+          <font name="Calibri" size="18"/>
           <text value="Dimensiones"/>
         </properties>
       </component>
@@ -114,6 +121,7 @@
           <forms/>
         </constraints>
         <properties>
+          <font name="Calibri" size="18"/>
           <text value="Fecha creado"/>
         </properties>
       </component>
@@ -123,6 +131,7 @@
           <forms/>
         </constraints>
         <properties>
+          <font name="Calibri" size="18"/>
           <text value="Lenguaje"/>
         </properties>
       </component>
@@ -132,6 +141,7 @@
           <forms/>
         </constraints>
         <properties>
+          <font name="Calibri" size="18"/>
           <text value="Numero de copias"/>
         </properties>
       </component>
@@ -173,7 +183,7 @@
       </component>
       <scrollpane id="ce970">
         <constraints>
-          <grid row="22" column="4" row-span="11" col-span="5" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="22" column="4" row-span="15" col-span="5" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
           <forms defaultalign-horz="false" defaultalign-vert="false"/>
         </constraints>
         <properties/>
@@ -251,7 +261,7 @@
       </hspacer>
       <vspacer id="b0001">
         <constraints>
-          <grid row="34" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <grid row="38" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
           <forms defaultalign-vert="false"/>
         </constraints>
       </vspacer>
@@ -267,6 +277,7 @@
           <forms/>
         </constraints>
         <properties>
+          <font name="Calibri" size="18"/>
           <text value="Genero/Estilo/Edicion"/>
         </properties>
       </component>
@@ -276,6 +287,7 @@
           <forms/>
         </constraints>
         <properties>
+          <font name="Calibri" size="18"/>
           <text value="Director/Grupo/TipoArte"/>
         </properties>
       </component>
@@ -285,6 +297,7 @@
           <forms/>
         </constraints>
         <properties>
+          <font name="Calibri" size="18"/>
           <text value="Pun/Nac/Pal"/>
         </properties>
       </component>
@@ -334,7 +347,17 @@
           <forms top="0" left="20" bottom="0" right="0" defaultalign-horz="false" defaultalign-vert="false"/>
         </constraints>
         <properties>
+          <font name="Calibri" size="18"/>
           <text value="Publico"/>
+        </properties>
+      </component>
+      <component id="29a68" class="javax.swing.JButton" binding="actualizarButton" default-binding="true">
+        <constraints>
+          <grid row="34" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <text value="Actualizar"/>
         </properties>
       </component>
     </children>

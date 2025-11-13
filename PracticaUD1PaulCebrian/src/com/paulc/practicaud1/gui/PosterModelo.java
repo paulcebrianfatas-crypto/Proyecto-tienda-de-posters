@@ -19,7 +19,8 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Base64;
 import java.util.Comparator;
-import java.util.HashMap;
+import java.util.Iterator;
+
 
 public class PosterModelo {
     private ArrayList<Poster> listaPosters;
@@ -249,7 +250,7 @@ public class PosterModelo {
                 nuevaObraPoster.setPaletaColores(nodoPoster.getChildNodes().item(10).getTextContent());
 
 
-                listaPosters.add(nuevaMusicaPoster);
+                listaPosters.add(nuevaObraPoster);
             } else if (nodoPoster.getTagName().equals("PeliculaPoster")) {
                 nuevaPeliculaPoster = new PeliculaPoster();
                 nuevaPeliculaPoster.setTitulo(nodoPoster.getChildNodes().item(0).getTextContent());
@@ -264,7 +265,7 @@ public class PosterModelo {
                 nuevaPeliculaPoster.setDirector(nodoPoster.getChildNodes().item(9).getTextContent());
                 nuevaPeliculaPoster.setPuntuacion(Float.parseFloat(nodoPoster.getChildNodes().item(10).getTextContent()));
 
-                listaPosters.add(nuevaMusicaPoster);
+                listaPosters.add(nuevaPeliculaPoster);
             }
         }
 
@@ -273,5 +274,19 @@ public class PosterModelo {
 
     public void ordenar(){
         this.listaPosters.sort(Comparator.comparing(Poster::getTitulo));
+    }
+
+    public boolean actualizar(Poster poster) {
+        Iterator<Poster> iterador = listaPosters.iterator();
+
+        // Recorrer usando el Iterator
+        while (iterador.hasNext()) {
+            Poster unPoster = iterador.next();
+            if (unPoster.getTitulo().equals(poster.getTitulo())){
+                iterador.remove();
+                return true;
+            }
+        }
+        return false;
     }
 }

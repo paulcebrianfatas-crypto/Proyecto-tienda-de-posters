@@ -37,6 +37,7 @@ public class Ventana {
     private JLabel fechaCreadoLbl;
     private JLabel lenguajeLbl;
     private JLabel numeroCopiasLbl;
+    public JButton actualizarButton;
     public byte[] imagen;
 
     public JFrame frame;
@@ -72,6 +73,8 @@ public class Ventana {
                 TitledBorder.TOP,
                 new Font("Arial", Font.BOLD, 12)
         ));
+        JLabel publicoLbl = new JLabel("Público:");
+        publicoLbl.setFont(new Font("Calibri", Font.BOLD,18));
 
         datosPoster.add(tituloLbl);
         datosPoster.add(tituloTxt);
@@ -91,7 +94,7 @@ public class Ventana {
         datosPoster.add(dirGruArtTxt);
         datosPoster.add(punNacPalLbl);
         datosPoster.add(punNacPalTxt);
-        datosPoster.add(new JLabel("Público:"));
+        datosPoster.add(publicoLbl);
         datosPoster.add(publicoCheckBox);
 
         panel1.add(datosPoster, BorderLayout.CENTER);
@@ -108,8 +111,10 @@ public class Ventana {
         panelBotones.add(modificarBoton(insertarImagenButton));
         panelBotones.add(modificarBoton(mostrarImagenButton));
         panelBotones.add(modificarBoton(nuevoButton) );
+        panelBotones.add(modificarBoton(actualizarButton));
         panelBotones.add(modificarBoton(exportarButton) );
         panelBotones.add(modificarBoton(importarButton) );
+
 
         panelInferior.add(panelBotones);
         JScrollPane scroll = new JScrollPane(list1);
