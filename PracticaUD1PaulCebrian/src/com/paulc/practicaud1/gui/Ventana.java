@@ -48,10 +48,9 @@ public class Ventana {
         // Panel principal con BorderLayout
         panel1 = new JPanel(new BorderLayout(10, 10));
         panel1.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        panel1.setBackground(Color.CYAN);
 
-        // ================================
-        // PANEL 1: Tipo de Póster
-        // ================================
+
         JPanel tipoPoster = new JPanel(new FlowLayout());
         tipoPoster.setBorder(BorderFactory.createTitledBorder(
                 BorderFactory.createLineBorder(Color.GRAY, 1),
@@ -65,9 +64,6 @@ public class Ventana {
         tipoPoster.add(peliculaRadioButton);
         panel1.add(tipoPoster, BorderLayout.NORTH);
 
-        // ================================
-        // PANEL 2: Datos del Póster (reordenado)
-        // ================================
         JPanel datosPoster = new JPanel(new GridLayout(0, 2, 5, 5));
         datosPoster.setBorder(BorderFactory.createTitledBorder(
                 BorderFactory.createLineBorder(Color.GRAY, 1),
@@ -77,7 +73,6 @@ public class Ventana {
                 new Font("Arial", Font.BOLD, 12)
         ));
 
-        // Orden indicado
         datosPoster.add(tituloLbl);
         datosPoster.add(tituloTxt);
         datosPoster.add(autorLbl);
@@ -104,14 +99,17 @@ public class Ventana {
         JPanel panelInferior = new JPanel();
         panelInferior.setLayout(new BoxLayout(panelInferior, BoxLayout.Y_AXIS));
         panelInferior.setBorder(null);
+        panelInferior.setBackground(Color.CYAN);
+
 
 
         JPanel panelBotones = new JPanel(new FlowLayout(FlowLayout.CENTER, 10, 10));
-        panelBotones.add(insertarImagenButton);
-        panelBotones.add(mostrarImagenButton);
-        panelBotones.add(nuevoButton);
-        panelBotones.add(exportarButton);
-        panelBotones.add(importarButton);
+        panelBotones.setBackground(Color.CYAN);
+        panelBotones.add(modificarBoton(insertarImagenButton));
+        panelBotones.add(modificarBoton(mostrarImagenButton));
+        panelBotones.add(modificarBoton(nuevoButton) );
+        panelBotones.add(modificarBoton(exportarButton) );
+        panelBotones.add(modificarBoton(importarButton) );
 
         panelInferior.add(panelBotones);
         JScrollPane scroll = new JScrollPane(list1);
@@ -141,5 +139,14 @@ public class Ventana {
     private void initComponents() {
         dlmPoster = new DefaultListModel<>();
         list1.setModel(dlmPoster);
+    }
+    private JButton modificarBoton(JButton boton){
+        boton.setBackground(new Color(0, 100, 0));
+        boton.setForeground(Color.WHITE);
+        boton.setFont(new Font("Arial", Font.BOLD, 14));
+        boton.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
+        boton.setFocusPainted(false);
+        boton.setPreferredSize(new Dimension(150, 30));
+        return boton;
     }
 }
