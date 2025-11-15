@@ -23,3 +23,5 @@ b
 .src/com/paulc/practicaud1/base/ObraPoster.java,6\4\643f2536153881d7a423284ef7515a2668113d04
 <
 posters.conf,f\a\fa0b9ba406fdbec7c81100324684fe3c4e63b278
+J
+PracticaUD1PaulCebrian.iml,4\e\4ec119b9601164ff58fdfbb4e2851545396a3070

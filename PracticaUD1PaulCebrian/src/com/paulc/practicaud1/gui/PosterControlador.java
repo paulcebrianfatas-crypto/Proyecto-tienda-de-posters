@@ -53,6 +53,8 @@ public class PosterControlador implements ActionListener, ListSelectionListener,
         vista.obraRadioButton.addActionListener(listener);
         vista.peliculaRadioButton.addActionListener(listener);
         vista.actualizarButton.addActionListener(listener);
+        vista.itemLimpiar.addActionListener(listener);
+        vista.itemMostrar.addActionListener(listener);
     }
 
     private boolean hayCamposVacios() {
@@ -171,7 +173,7 @@ public class PosterControlador implements ActionListener, ListSelectionListener,
         switch (actionCommand) {
             case "Nuevo":
                 if (hayCamposVacios()) {
-                    Util.mensajeError("Los siguientes campos no pueden estar vacios \n Matricula\nMarca\nModelo\nFechaMatriculacion\n"
+                    Util.mensajeError("Los siguientes campos no pueden estar vacios \n Titulo\nAutor\nDimensiones\nFechaCreado\nLenguaje\nNumero de copias"
                             +vista.genEstEdiLbl.getText() +"\n" + vista.dirGruArtLbl.getText() + "\n" + vista.punNacPalLbl.getText());
                     break;
                 }
@@ -240,10 +242,13 @@ public class PosterControlador implements ActionListener, ListSelectionListener,
                         vista.imagen = bytesImagen;
 
                         Util.mensajeExtra("Imagen importada correctamente:\n" + archivoSelecionado.getName());
+                        break;
                     } catch (IOException ex) {
                         Util.mensajeError("Error al leer la imagen: " +ex.getMessage());
+                        break;
                     }
-                    }
+                }
+                break;
             }
             case "Mostrar Imagen":{
                 if (vista.imagen!=null) {
@@ -257,13 +262,16 @@ public class PosterControlador implements ActionListener, ListSelectionListener,
                         Image imagenEscalada = icon.getImage().getScaledInstance(wight,height,Image.SCALE_SMOOTH);
 
                         Util.verImagen(imagenEscalada);
+                        break;
 
                     } catch (Exception e1){
                         Util.mensajeError("Dimensiones tiene mal formato: wight x height");
+                        break;
                     }
 
                 } else {
                     Util.mensajeError("Error al mostrar la imagen: No hay imagen selecionada");
+                    break;
                 }
             }
             case "Actualizar": {
@@ -320,6 +328,26 @@ public class PosterControlador implements ActionListener, ListSelectionListener,
                 vista.genEstEdiLbl.setText("Genero");
                 vista.dirGruArtLbl.setText("Director");
                 vista.punNacPalLbl.setText("Puntuacion");
+                break;
+            }
+            case "limpiar":{
+                if(!modelo.getListaPosters().isEmpty()){
+                    modelo.limpiar();
+                    limpiarCampos();
+                    refrescar();
+                } else {
+                    Util.mensajeError("No hay datos para borrar");
+                }
+
+                break;
+            }
+            case "mostrarDatos":{
+                if(!modelo.getListaPosters().isEmpty()){
+                    modelo.mostrarDatos();
+                } else {
+                    Util.mensajeError("No hay datos creados");
+                }
+
                 break;
             }
 

@@ -4,6 +4,7 @@ import com.paulc.practicaud1.base.MusicaPoster;
 import com.paulc.practicaud1.base.ObraPoster;
 import com.paulc.practicaud1.base.PeliculaPoster;
 import com.paulc.practicaud1.base.Poster;
+import com.paulc.practicaud1.util.Util;
 import org.w3c.dom.*;
 import org.xml.sax.SAXException;
 
@@ -270,6 +271,9 @@ public class PosterModelo {
         }
 
     }
+    public void limpiar(){
+        listaPosters.clear();
+    }
 
 
     public void ordenar(){
@@ -288,5 +292,9 @@ public class PosterModelo {
             }
         }
         return false;
+    }
+
+    public void mostrarDatos() {
+        Util.mostrarDatos(getListaPosters());
     }
 }
