@@ -1,3 +1,8 @@
 
 W
-java:S1118":Add a private constructor to hide the implicit public one.(×¼­Æ8å•îš¦3
+java:S1118":Add a private constructor to hide the implicit public one.(×¼­Æ8å•îš¦3
+”
+java:S1319Q"wThe type of the "listaPosters" object should be an interface such as "List" rather than the implementation "ArrayList".(ÆùŠŸ8’”å¾¨3
+
+java:S1192i"_Define a constant instead of duplicating this literal "-----------------------------
+" 3 times.(ó ã˜ùÿÿÿÿ8’”å¾¨3

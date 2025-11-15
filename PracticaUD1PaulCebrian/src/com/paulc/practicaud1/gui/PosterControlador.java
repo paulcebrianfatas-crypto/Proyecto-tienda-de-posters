@@ -195,14 +195,20 @@ public class PosterControlador implements ActionListener, ListSelectionListener,
     @Override
     public void windowClosing(WindowEvent e) {
         int resp = Util.mensajeConfirmacion("¿Desea cerrar la ventana?", "Salir");
-        if (resp == JOptionPane.OK_OPTION) {
-            try {
-                guardarConfiguracion();
-            } catch (IOException ex) {
-                ex.printStackTrace();
+        try {
+
+            if (resp == JOptionPane.OK_OPTION) {
+                try {
+                    guardarConfiguracion();
+                } catch (IOException ex) {
+
+                }
+                System.exit(0);
             }
-            System.exit(0);
+        } catch (Exception e1){
+
         }
+
     }
 
     /**

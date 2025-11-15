@@ -7,12 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9675de6f-7c0a-4630-9a61-04b4c4cad202" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../PracticaUD1PaulCebrian.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/PracticaUD1PaulCebrian_jar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PracticaUD1PaulCebrian/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PracticaUD1PaulCebrian/META-INF/PracticaUD1PaulCebrian.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/PracticaUD1PaulCebrian_jar/PracticaUD1PaulCebrian.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/PracticaUD1PaulCebrian_jar/PracticaUD1PaulCebrian.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/paulc/practicaud1/gui/PosterControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/paulc/practicaud1/gui/PosterControlador.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +70,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Principal">
+  <component name="RunManager" selected="JAR Application.PracticaUD1PaulCebrian.jar">
     <configuration name="Principal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.paulc.practicaud1.Principal" />
       <module name="PracticaUD1PaulCebrian" />
@@ -100,8 +97,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PracticaUD1PaulCebrian.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/PracticaUD1PaulCebrian_jar/PracticaUD1PaulCebrian.jar" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JAR Application.PracticaUD1PaulCebrian.jar" />
         <item itemvalue="Application.Principal" />
         <item itemvalue="Application.prueba" />
       </list>
@@ -151,6 +153,8 @@
       <workItem from="1763048417554" duration="18922000" />
       <workItem from="1763106543854" duration="933000" />
       <workItem from="1763110766798" duration="14188000" />
+      <workItem from="1763213298043" duration="359000" />
+      <workItem from="1763215712511" duration="485000" />
     </task>
     <servers />
   </component>

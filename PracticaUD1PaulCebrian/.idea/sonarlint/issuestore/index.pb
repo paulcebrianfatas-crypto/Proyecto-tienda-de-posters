@@ -25,3 +25,5 @@ b
 posters.conf,f\a\fa0b9ba406fdbec7c81100324684fe3c4e63b278
 J
 PracticaUD1PaulCebrian.iml,4\e\4ec119b9601164ff58fdfbb4e2851545396a3070
+H
+src/META-INF/MANIFEST.MF,e\4\e4b1fd2293ba1e598e6bec4e0ee3b6b6851eb5a2
