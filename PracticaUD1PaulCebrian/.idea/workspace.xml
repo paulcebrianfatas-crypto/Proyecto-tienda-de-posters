@@ -2,18 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9675de6f-7c0a-4630-9a61-04b4c4cad202" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/e/6e26b6057a9e684b1de4d36f9eb5cd11d497b8b0" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/e/6e26b6057a9e684b1de4d36f9eb5cd11d497b8b0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/b/8bc91f8695e33b0c34293ac770662cc301482990" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/b/8bc91f8695e33b0c34293ac770662cc301482990" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/3/a34827a6fa15f124edf0a22f8722efba5febf1b3" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/3/a34827a6fa15f124edf0a22f8722efba5febf1b3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/1/c11cbb81121f9293540fc887bf37202bcb8b93ad" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/1/c11cbb81121f9293540fc887bf37202bcb8b93ad" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PracticaUD1PaulCebrian/com/paulc/practicaud1/gui/PosterControlador.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PracticaUD1PaulCebrian/com/paulc/practicaud1/gui/PosterControlador.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/paulc/practicaud1/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/paulc/practicaud1/Principal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/paulc/practicaud1/base/MusicaPoster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/paulc/practicaud1/base/MusicaPoster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/paulc/practicaud1/base/ObraPoster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/paulc/practicaud1/base/ObraPoster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/paulc/practicaud1/base/PeliculaPoster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/paulc/practicaud1/base/PeliculaPoster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/paulc/practicaud1/base/Poster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/paulc/practicaud1/base/Poster.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/paulc/practicaud1/gui/PosterControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/paulc/practicaud1/gui/PosterControlador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/paulc/practicaud1/gui/PosterModelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/paulc/practicaud1/gui/PosterModelo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/paulc/practicaud1/gui/Ventana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/paulc/practicaud1/gui/Ventana.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/paulc/practicaud1/util/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/paulc/practicaud1/util/Util.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vehiculos.conf" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -146,7 +145,7 @@
       <workItem from="1763035848993" duration="971000" />
       <workItem from="1763048417554" duration="18922000" />
       <workItem from="1763106543854" duration="933000" />
-      <workItem from="1763110766798" duration="8762000" />
+      <workItem from="1763110766798" duration="11607000" />
     </task>
     <servers />
   </component>
@@ -165,16 +164,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/paulc/practicaud1/base/Poster.java</url>
-          <line>91</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
